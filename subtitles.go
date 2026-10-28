@@ -85,6 +85,8 @@ func Open(o Options) (s *Subtitles, err error) {
 		s, err = ReadFromSRT(f)
 	case ".ssa", ".ass":
 		s, err = ReadFromSSA(f)
+	case ".scc":
+		s, err = ReadFromSCC(f)
 	case ".stl":
 		s, err = ReadFromSTL(f, o.STL)
 	case ".ts":
